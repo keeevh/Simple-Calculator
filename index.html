@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/19999b5269.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="styslesheet" href="stylesheet.css" type="text/css" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator-top">
+        <input class="display-number input1" value="150 x 3" /disabled /> <input
+        class="display-number input2" value="4523" /disabled />
+      </div>
+      <div class="calculator-bottom">
+        <div class="button-row">
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button class="button green calcBtn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="button-row">
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button green calcBtn">
+            <i class="fa-solid fa-percent"></i>
+          </button>
+        </div>
+        <div class="button-row">
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button green calcBtn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="button-row">
+          <button class="button resetBtn">AC</button>
+          <button class="button">.</button>
+          <button class="button">0</button>
+          <button class="button green calcBtn">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+        <div class="button-row">
+          <button class="button eqlBtn">=</button>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: arial;
+      }
+
+      .container {
+        background: #22262d;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .calculator-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 30px;
+        height: 150px;
+      }
+
+      .display-number {
+        width: 300px;
+        text-align: right;
+        color: white;
+        background: none;
+        border: none;
+      }
+
+      .input1 {
+        font-size: 18px;
+        color: #1ae2ad;
+      }
+
+      .input2 {
+        font-size: 50px;
+      }
+
+      .calculator-bottom {
+        width: 100%;
+        background: #292d37;
+        padding: 25px 0;
+        margin: auto;
+        border-radius: 25px 25px 0 0;
+      }
+
+      .button-row {
+        margin: 15px auto;
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .button {
+        height: 75px;
+        width: 75px;
+        color: white;
+        background: #272b33;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 250ms ease-out;
+      }
+
+      .button:hover {
+        background: #1b1d22;
+        cursor: pointer;
+        transition: 250ms ease-out;
+      }
+
+      .green {
+        color: #1ae2ad;
+      }
+
+      .eqlBtn {
+        width: 100%;
+      }
+
+      .resetBtn {
+        color: #1ae2ad;
+      }
+
+      @media all and (min-width: 450px) {
+        body {
+          background: rgb(22, 22, 22);
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .container {
+          max-width: 400px;
+          height: auto;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        .calculator-bottom {
+          border-radius: 30px 30px 0 0;
+        }
+      }
+    </style>
+
+    <script src="app.js"></script>
+  </body>
+</html>
