@@ -9,9 +9,23 @@ let firstValue = "";
 let secondValue = "";
 let operator = "";
 
+let restart = false;
+
+let clearAll = function clearAll() {
+  upperDisplay.value = "";
+  lowerDisplay.value = "";
+  firstValue = "";
+  secondValue = "";
+  operator = "";
+};
+
 // Adding numbers to lowerDisplay on Number Button click
 numBtn.forEach((el) => {
   el.addEventListener("click", (e) => {
+    if (restart === true) {
+      clearAll();
+      restart = false;
+    }
     if (firstValue !== "" && operator !== "") {
       let button = e.target.innerText;
       lowerDisplay.value += button;
@@ -49,7 +63,7 @@ eqlBtn.addEventListener("click", () => {
     secondValue = parseInt(secondValue);
   }
 
-  // Operating the Math Calculation
+  // Math Calculation
   let calc;
   if (operator === "x") {
     let calc = firstValue * secondValue;
@@ -64,13 +78,11 @@ eqlBtn.addEventListener("click", () => {
     let calc = firstValue - secondValue;
     lowerDisplay.value = calc;
   }
+
+  restart = true;
 });
 
 // AC button to clear current input
 clearBtn.addEventListener("click", () => {
-  upperDisplay.value = "";
-  lowerDisplay.value = "";
-  firstValue = "";
-  secondValue = "";
-  operator = "";
+  clearAll();
 });
