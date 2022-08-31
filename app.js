@@ -26,6 +26,7 @@ numBtn.forEach((el) => {
       clearAll();
       restart = false;
     }
+
     if (firstValue !== "" && operator !== "") {
       let button = e.target.innerText;
       lowerDisplay.value += button;
